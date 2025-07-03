@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary: hsl(0,0%,95%);
+  --accent: hsl(25, 76%, 40%);
+  --banner-heading: bold 3rem/1.5 "Georgia", serif;
+  --hero-heading: bold 2rem/1.5 "Georgia", serif;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--primary);
+}
+
+.header {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: bold;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.nav-menu a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.nav-menu a:hover {
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+  background-image: url('./assets/chaipatti.png');
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size:auto;
+  height: 75vh;
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00000094;
+  z-index: 1;
+}
+
+.hero-text{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font: var(--banner-heading);
+  color: var(--primary);
+}
+
+.hero-text p {
+  font: 1rem/1.4 "Georgia", serif;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+.shop-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.shop-button:hover {
+  opacity: 1;
+}
+
+.tea-collection {
+  margin-top: 2rem;
+  background-color: var(--primary);
+}
+
+.tea-collection h2 {
+  text-align: center;
+  font: var(--hero-heading);
+  color: var(--accent);
+}
+
+.tea-cards {
+  padding: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: minmax(200px,auto);
+  grid-template-columns: repeat(3,auto);
+}
+
+.tea-card {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px #d6d3d36c;
+}
+
+.tea-card h3 {
+  color: var(--accent);
+}
+
+.tea-card p {
+  padding: 1.8rem;
+  opacity: 0.8;
+}
